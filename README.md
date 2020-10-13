@@ -11,7 +11,7 @@ The 4 main key ingredients to clear the exam are:
 
 To get better with all these, you just have to PRACTICE, there is no escape here. And once you feel compfortable then go for the test.
 
-## Exam Specification
+## Exam Specifications
 1. Number of Questions: 19
 2. Total time given: 2hrs.
 3. Exam type: Lab based, no multiple choice questions
