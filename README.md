@@ -68,4 +68,11 @@ $ kgp -A
 4. Get the name of the current namespace
 ```
 $ kd pods | grep -i namespace -m 1
+
 ```
+
+## Practice Material
+There are several options available here but I would recommend doing as many questions as many times as you can
+1. Git Repo with scenario questions: https://github.com/dgkanatsios/CKAD-exercises
+2. Another good resource: https://codeburst.io/kubernetes-ckad-weekly-challenges-overview-and-tips-7282b36a2681 by Kim Wuestkamp
+3. 150 Question set available [here](https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552)
