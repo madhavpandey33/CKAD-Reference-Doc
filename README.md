@@ -95,12 +95,32 @@ $ k create cm prodconfig --from-literal=key1=value1
 ```
 
 <details>
-  <summary>Click to continue with imperative commands!</summary>
+  <summary> Click to continue with imperative commands!</summary>
   
   11. Create secret named prodsecret
   ```sql
   $ k create secret generic prodsecret --from-literal=key2=value2 
   ```
+
+  12. Create a nginx pod and expose its port 80 on the container
+  ```
+  $ k run nginx --image=nginx --port=80
+  ```
+
+  13. Create a deploy nginx with 3 replicas
+  ```
+  $ k create deploy nginx --image=nfinx --replicas=3
+  ```
+ 
+ 14. Expose the deployment created above with a ClusterIP service
+ ```
+ $ k expose deploy nginx --port=80 --target-port=8000 # ClusterIP service is the default type when you create a service like this
+ ```
+ 
+ 15. Generate a yaml for a deployment without creating it
+ ```
+   $ k create deploy nginx --image=nginx --replicas=15 $do
+ ```
  
 </details>
 
