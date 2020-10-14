@@ -68,8 +68,33 @@ $ kgp -A
 4. Get the name of the current namespace
 ```
 $ kd pods | grep -i namespace -m 1
-
 ```
+5. Output the nginx deploy object in yaml and store it a file
+```
+$ k get deploy nginx $do > nginx-deploy.yaml
+```
+6. Create a object using a yaml file
+```
+$ kcc nginx.yaml
+```
+7. Delete the object created in the above step
+```
+$ kdd nginx.yaml
+```
+8. Delete the same object without any delay
+```
+$ kdd nginx.yaml $del
+```
+9. Describe the nginx pod
+```
+$ kd pod nginx
+```
+10. Create configmap prodconfig in the current namespace
+```
+$ k create cm prodconfig --from-literal=key1=value1
+```
+
+
 
 ## Practice Material
 There are several options available here but I would recommend doing as many questions as many times as you can
