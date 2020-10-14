@@ -94,6 +94,16 @@ $ kd pod nginx
 $ k create cm prodconfig --from-literal=key1=value1
 ```
 
+<details>
+  <summary>Click to continue with imperative commands!</summary>
+  
+  11. Create secret named prodsecret
+  ```sql
+  $ k create secret generic prodsecret --from-literal=key2=value2 
+  ```
+ 
+</details>
+
 
 
 ## Practice Material
