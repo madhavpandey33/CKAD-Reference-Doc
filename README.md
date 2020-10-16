@@ -119,11 +119,31 @@ $ k create cm prodconfig --from-literal=key1=value1
  
  15. Generate a yaml for a deployment without creating it
  ```
-   $ k create deploy nginx --image=nginx --replicas=15 $do
+ $ k create deploy nginx --image=nginx --replicas=15 $do
+ ```
+ 
+ 16. Get the names of nodes running the pods
+ ```
+ $ kgp -o wide
+ ```
+
+ 17. Get the nodes
+ ```
+ $ k get nodes -o wide
+ ```
+
+ 18. Run a nginx pod with command 'sleep 3600'
+ ```
+ $ k run nginx --image=nginx -- /bin/sh -c 'sleep 3600'
+ ```
+ 
+ 19. Get into a running nginx pod and run command 'ls'
+ ```
+ $ k exec nginx -it -- /bin/sh
+  ls
  ```
  
 </details>
-
 
 
 ## Practice Material
@@ -131,3 +151,16 @@ There are several options available here but I would recommend doing as many que
 1. Git Repo with scenario questions: https://github.com/dgkanatsios/CKAD-exercises
 2. Another good resource: https://codeburst.io/kubernetes-ckad-weekly-challenges-overview-and-tips-7282b36a2681 by Kim Wuestkamp
 3. 150 Question set available [here](https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552)
+
+## My Exam Experience
+
+Some observations from my exam:
+- You can start the exam 15 mins before the schedule time, so starting early does help because some time it takes long time to complete pre-requisite checks like ID, env, etc.
+ 
+- I skipped the questions which had less than 3% weightage with a long description, you can always flag them and come back later to solve it
+
+- While preparing for this test I bookmarked all the important topic which turned out to be a huge plus when giving the exam 
+
+- The tips for creating aliases helped me complete the exam in ~50 mins and go over the flagged questions once again
+
+- This exam is all about getting 66%, so you don't have attempt all the questions. Make sure whatever you do is correct at least 66% worth of points
